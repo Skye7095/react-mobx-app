@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { observer } from 'mobx-react';
+import { useContext } from 'react';
+import { CounterContext, useCounterStore } from './context/counterContext';
 
-function App({myCounter}) {
+function App() {
+
+  const myCounter = useCounterStore()
 
   return (
     <div style={{textAlign: 'center', padding: 16}}>
